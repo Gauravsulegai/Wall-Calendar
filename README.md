@@ -4,7 +4,7 @@ A highly polished, interactive wall calendar component.
 
 Focused on delivering a premium user experience, this widget features realistic UI elements, intelligent layout stability, smooth directional animations, and persistent local storage.
 
-🚀 **[View Live Demo Here]([https://wall-calendar-wine-gamma.vercel.app/])**
+🚀 **[https://wall-calendar-wine-gamma.vercel.app/]([])**
 
 ---
 
