@@ -1,22 +1,22 @@
 # 🗓️ Interactive Wall Calendar Widget 
 
-A highly polished, interactive wall calendar component built for the TUF frontend engineering take-home assignment. 
+A highly polished, interactive wall calendar component. 
 
 Focused on delivering a premium user experience, this widget features realistic UI elements, intelligent layout stability, smooth directional animations, and persistent local storage.
 
-🚀 **[View Live Demo Here]([YOUR_VERCEL_LINK_HERE])**
+🚀 **[View Live Demo Here]([https://wall-calendar-wine-gamma.vercel.app/])**
 
 ---
 
 ## ✨ Key Features & UX Polish
 
-While building this widget, I focused heavily on the "extra 10%" that separates a standard grid from a premium product:
+While building this widget, I focused heavily on the UI/UX that separates a standard grid from a premium product:
 
 * **Realistic "Wall Calendar" Aesthetic:** Implemented a pure-CSS twin-loop spiral binding and hanger hook to give the widget a tactile, physical presence without relying on heavy external SVG assets.
-* **Intelligent Layout Stability:** Addressed the common "calendar bounce" issue. The grid dynamically adjusts to 5-week or 6-week months while the parent container's height is strictly locked, ensuring zero layout shift when navigating between months.
+* **Intelligent Layout Stability:** Addressed the common "calendar bounce" issue. The grid dynamically adjusts to 4-week or 5-week months while the parent container's height is strictly locked, ensuring zero layout shift when navigating between months.
 * **Directional Flip Animations:** Built custom `@keyframes` to slide the calendar *up* for future months and *down* for previous months, mimicking the physical action of flipping pages.
 * **Smart Contextual Controls:** The "Today" action button dynamically disappears when the user is already viewing the current month, reducing UI clutter.
-* **Persistent Memo Pad:** Integrated a robust `localStorage` solution for the Notes section, allowing users to jot down context-specific thoughts that survive page reloads.
+* **Persistent Memo Pad:** Used `localStorage` solution for the Notes section, allowing users to jot down context-specific thoughts.
 
 ## 🛠️ Tech Stack
 
