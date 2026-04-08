@@ -1,16 +1,63 @@
-# React + Vite
+# 🗓️ Interactive Wall Calendar Widget 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A highly polished, interactive wall calendar component built for the TUF frontend engineering take-home assignment. 
 
-Currently, two official plugins are available:
+Focused on delivering a premium user experience, this widget features realistic UI elements, intelligent layout stability, smooth directional animations, and persistent local storage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🚀 **[View Live Demo Here]([YOUR_VERCEL_LINK_HERE])**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features & UX Polish
 
-## Expanding the ESLint configuration
+While building this widget, I focused heavily on the "extra 10%" that separates a standard grid from a premium product:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Realistic "Wall Calendar" Aesthetic:** Implemented a pure-CSS twin-loop spiral binding and hanger hook to give the widget a tactile, physical presence without relying on heavy external SVG assets.
+* **Intelligent Layout Stability:** Addressed the common "calendar bounce" issue. The grid dynamically adjusts to 5-week or 6-week months while the parent container's height is strictly locked, ensuring zero layout shift when navigating between months.
+* **Directional Flip Animations:** Built custom `@keyframes` to slide the calendar *up* for future months and *down* for previous months, mimicking the physical action of flipping pages.
+* **Smart Contextual Controls:** The "Today" action button dynamically disappears when the user is already viewing the current month, reducing UI clutter.
+* **Persistent Memo Pad:** Integrated a robust `localStorage` solution for the Notes section, allowing users to jot down context-specific thoughts that survive page reloads.
+
+## 🛠️ Tech Stack
+
+* **Core:** React.js (Hooks, Functional Components)
+* **Styling:** Tailwind CSS (Utility-first, highly responsive)
+* **Build Tool:** Vite (For blazing fast HMR and optimized builds)
+* **State Management:** Custom React Hooks (`useCalendarState`)
+* **Deployment:** Vercel
+
+---
+
+## 🧠 Architectural Decisions
+
+**1. CSS Animations over 3D Libraries**
+To simulate flipping a page, I opted for directional CSS translations rather than importing a heavy 3D library (like Three.js or complex `rotateX` math). This keeps the bundle size incredibly small, maintains perfect hit-boxes for touch devices, and ensures completely smooth 60fps performance across all browsers.
+
+**2. Separation of Concerns (`dateUtils.js`)**
+All calendar math (calculating padding days, leap years, and grid matrices) is strictly separated from the React rendering logic into a pure JavaScript utility file. This makes the components highly readable and ensures the math functions are perfectly testable in isolation.
+
+**3. Tailored Form Inputs**
+The memo pad `textarea` is rigidly controlled (`resize-none` and fixed heights) to prevent the user from accidentally breaking the flexbox layout of the parent card, ensuring the UI remains pristine.
+
+---
+
+## 💻 Running Locally
+
+To run this project on your local machine, follow these steps:
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/Gauravsulegai/Wall-Calendar
+cd wall-calendar
+
+**2. Install dependencies**
+```bash
+npm install
+
+**3. Start the development server**
+```bash
+npm run dev
+
+---
+
+*Built by Gaurav for the TUF Engineering Assessment.*
