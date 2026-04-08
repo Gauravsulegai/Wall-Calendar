@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+body {
+  background-color: #f8fafc;
+}
+
+/* ---Calendar Flip Animations --- */
+@keyframes slide-up-in {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down-in {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-flip-next {
+  /* cubic-bezier gives it a snappy, spring-like feel */
+  animation: slide-up-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-flip-prev {
+  animation: slide-down-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
