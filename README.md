@@ -47,15 +47,14 @@ To run this project on your local machine, follow these steps:
 ```bash
 git clone https://github.com/Gauravsulegai/Wall-Calendar
 cd wall-calendar
+```
 
 **2. Install dependencies**
 ```bash
 npm install
+```
 
 **3. Start the development server**
 ```bash
 npm run dev
-
----
-
-*Built by Gaurav for the TUF Engineering Assessment.*
+```
